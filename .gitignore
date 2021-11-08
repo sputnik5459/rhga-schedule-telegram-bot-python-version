@@ -1,0 +1,11 @@
+venv
+local_settings.py
+
+*.ipynb
+
+*.xlsx
+*.xlsm
+*.xlsb
+*.xltx
+*.xls
+*.xml
