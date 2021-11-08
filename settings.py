@@ -1,3 +1,7 @@
+import os
+
+PROJECT_ROOT = os.path.abspath(os.path.dirname(__file__))
+
 XLSX_FILE_NAME = "schedule.xlsx"
 
 TELEGRAM_BOT_TOKEN = ""  # define in local_settings.py
