@@ -38,5 +38,9 @@ def _setup_dispatcher(_dispatcher: Dispatcher):
     return _dispatcher
 
 
+# init schedule's database at start of the server
+utils.df = utils.load_xlsx()
+
+# init telegram bot listener
 updater = Updater(settings.TELEGRAM_BOT_TOKEN, use_context=True)
 dispatcher = _setup_dispatcher(updater.dispatcher)

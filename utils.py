@@ -5,6 +5,11 @@ import settings
 from settings import XLSX_FILE_NAME
 
 
+# define at the global scope lvl
+# TODO: move all global variables to special file
+df = None
+
+
 def load_xlsx() -> pd.DataFrame:
     if not XLSX_FILE_NAME:
         raise FileNotFoundError("Can not locate schedule xlsx. Check your 'settings.py'")
@@ -20,9 +25,6 @@ def load_xlsx() -> pd.DataFrame:
         ],
         axis=0
     )
-
-
-df = load_xlsx()
 
 
 def parse_message(message: str) -> tuple[tuple, bool]:
